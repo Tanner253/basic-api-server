@@ -7,7 +7,7 @@ sequelize.sync()
   console.log('database is synced and ready to go');
   // peopleModel.create({name: 'tom'});
   // musicModel.create({songName: 'brap brap boop'});
-  start();
+  start(process.env.PORT);
 })
 .catch(err => {
   console.error(err);
