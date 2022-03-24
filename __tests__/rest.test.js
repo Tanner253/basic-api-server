@@ -64,22 +64,22 @@ describe('testing rest api', () =>{
     expect(response.body.songName).toEqual("whats up this is song name");
   })
 
-  test("should READ ALL people", async () =>{
+  test("should READ ALL musics", async () =>{
     let response = await request.get('/music')
     expect(response.status).toEqual(200);
   })
 
-  test("should READ ONE peoples", async () =>{
+  test("should READ ONE music", async () =>{
     let response = await request.get('/music/1')
     expect(response.status).toEqual(200);
   })
   
-  test("should UPDATE a person", async () =>{
+  test("should UPDATE a musics", async () =>{
     let response = await request.put('/music/1').send({name: "BILLY OH BOY"});
     expect(response.status).toBe(200);
   })
 
-  test("should DELETE a person", async () =>{
+  test("should DELETE a Music", async () =>{
     let response = await request.delete('/music/1');
     expect(response.status).toBe(200);
   })
