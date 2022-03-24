@@ -5,7 +5,10 @@ const peopleSchema = require('./people.schema.js');
 const musicSchema = require('./music.schema.js');
 
 const DATABASE_URL = process.env.NODE_ENV === 'test' ? 'sqlite::memory' : process.env.DATABASE_URL || 'postgresql://localhost:5432/api-app'
+console.log(DATABASE_URL, process.env.NODE_ENV)
 
+
+//diable if need to seed locally!
 const sequelize = new Sequelize(DATABASE_URL, {
   dialectOptions:{
     ssl:{

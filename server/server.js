@@ -11,6 +11,9 @@ app.use(express.json());
 app.use(peopleRouter);
 app.use(musicRouter);
 
+app.get ('/', (req, res, next) => {
+    res.send("home");
+});
 module.exports = {
     app,
     start: (PORT) => {
